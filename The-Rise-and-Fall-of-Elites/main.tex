@@ -1,0 +1,30 @@
+\documentclass{ctexbook}
+
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+\usepackage[backend=biber,style=gb7714-2015ay]{biblatex}
+\addbibresource{trans.bib}
+
+\usepackage{endnotes}
+\usepackage{etoolbox}
+\makeatletter
+\def\enoteheading{\section*{本章注释}}
+\makeatother
+\csappto{theendnotes}{\setcounter{endnote}{0}}
+
+\title{精英的起落}
+\author{Vilfredo Pareto\\[1ex] 
+\small 吴自华/译}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\include{chap/01}
+
+\printbibliography[heading=bibliography,title=参考文献]
+
+\end{document}
+
